@@ -295,6 +295,31 @@ struct List[T: CollectionElement](CollectionElement, Sized, Boolable):
         # list.
         self.size = final_size
 
+    fn sort(inout self):
+        print("sort!")
+
+        if len(self) == 1:
+            print("len is 1")
+            return
+
+        # debug assert 2
+
+        for i in range(1, len(self)):
+            var j = i
+
+            var data_ptr = self.data + j
+            var left_ptr = self.data + j - 1
+
+            if self[j] < self[j - 1]:
+                print("pa")
+            # print(data_ptr[])
+            # print(left_ptr[])
+            # print(left_ptr[])
+            # if data_ptr[] < left_ptr[]
+            #     print("is less")
+
+
+
     @always_inline
     fn pop(inout self, i: Int = -1) -> T:
         """Pops a value from the list at the given index.

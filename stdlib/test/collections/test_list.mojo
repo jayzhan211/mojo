@@ -682,27 +682,50 @@ def test_converting_list_to_string():
     assert_equal(__type_of(my_list3).__str__(my_list3), "[1.0, 2.0, 3.0]")
 
 
+def test_123():
+    var a = List[Int](1, 2)
+    assert_equal(a[0], 1)
+    assert_equal(a[1], 2)
+    assert_true(a[0] < a[1])
+
+    a.sort()
+
+    # a = List[Int](1, 2, 3)
+    # var check: Int = 1
+    # for item in a:
+    #     assert_equal(item[], check)
+    #     check += 1
+    # a.reverse()
+    # check = 3
+    # for item in a:
+    #     assert_equal(item[], check)
+    #     check -= 1
+    # var b = a.pop()
+    # a.sort()
+    # assert_equal(a[0], 2)
+
 def main():
-    test_mojo_issue_698()
-    test_list()
-    test_list_clear()
-    test_list_to_bool_conversion()
-    test_list_pop()
-    test_list_variadic_constructor()
-    test_list_resize()
-    test_list_reverse()
-    test_list_reverse_move_count()
-    test_list_insert()
-    test_list_index()
-    test_list_extend()
-    test_list_extend_non_trivial()
-    test_list_explicit_copy()
-    test_list_copy_constructor()
-    test_2d_dynamic_list()
-    test_list_iter()
-    test_list_iter_mutable()
-    test_list_span()
-    test_list_boolable()
-    test_constructor_from_pointer()
-    test_constructor_from_other_list_through_pointer()
-    test_converting_list_to_string()
+    test_123()
+    # test_mojo_issue_698()
+    # test_list()
+    # test_list_clear()
+    # test_list_to_bool_conversion()
+    # test_list_pop()
+    # test_list_variadic_constructor()
+    # test_list_resize()
+    # test_list_reverse()
+    # test_list_reverse_move_count()
+    # test_list_insert()
+    # test_list_index()
+    # test_list_extend()
+    # test_list_extend_non_trivial()
+    # test_list_explicit_copy()
+    # test_list_copy_constructor()
+    # test_2d_dynamic_list()
+    # test_list_iter()
+    # test_list_iter_mutable()
+    # test_list_span()
+    # test_list_boolable()
+    # test_constructor_from_pointer()
+    # test_constructor_from_other_list_through_pointer()
+    # test_converting_list_to_string()
